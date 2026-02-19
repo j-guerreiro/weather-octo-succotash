@@ -1,0 +1,16 @@
+.search-location-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+}
+
+.form-input {
+  margin: 10px;
+  padding: 5px;
+}
+
+form {
+  border: 0.5px solid gray;
+  border-radius: 5px;
+}
