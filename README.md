@@ -2,6 +2,8 @@
 
 Simple weather APP with a form where you can search a location and check the current weather (temperature).
 
+[Initial Layout](./src/assets/app-initial-layout.png)
+
 ## How to run
 
 - Clone the repo
