@@ -1,14 +1,23 @@
 import { search } from "../../API/search";
-import { StyledForm, StyledFormInput } from "./style";
+import {
+    StyledForm,
+    StyledFormContainer,
+    StyledFormInput,
+    StyledFormTitle
+} from "./style";
 
 export const SearchModal = () => {
     return (
         <>
-            <StyledForm action={search}>
-                <div className='form-info'>Search Location 🌐</div>
-                <StyledFormInput className='form-input' name="query" />
-                <button type='submit'>🔎︎</button>
-            </StyledForm>
+            <StyledFormContainer>
+                <StyledFormTitle>Search Location 🌐</StyledFormTitle>
+
+                <StyledForm action={search}>
+                    <StyledFormInput className='form-input' name="query" />
+                    <button type='submit'>🔎︎</button>
+                </StyledForm>
+            </StyledFormContainer>
+
         </>
     )
 }
