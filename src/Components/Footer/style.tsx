@@ -1,0 +1,8 @@
+import styled from "@emotion/styled";
+
+export const StyledFooter = styled.footer`
+  padding: 20px;
+  margin: 20px;
+  border: 0.5px solid gray;
+  border-radius: 5px;
+`;

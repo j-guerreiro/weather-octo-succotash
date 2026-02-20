@@ -1,11 +1,11 @@
-import './index.css';
+import { StyledFooter } from './style';
 
 export const Footer = () => {
     return (
         <>
-            <footer className='footer'>
+            <StyledFooter className='footer'>
                 <em>Copyright <a href="#">jguerreiro</a></em>
-            </footer>
+            </StyledFooter>
         </>
     )
 }
