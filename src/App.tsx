@@ -1,14 +1,14 @@
 import './App.css'
 import { Footer } from './Components/Footer'
 import { Header } from './Components/Header'
-import { SearchLocation } from './Components/SearchLocation'
+import { ModalOpenerButton } from './Components/ModalOpenerButton'
 
 function App() {
 
   return (
     <>
       <Header />
-      <SearchLocation />
+      <ModalOpenerButton />
       <Footer />
     </>
   )
