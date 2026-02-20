@@ -1,4 +1,5 @@
 import { search } from "../../API/search";
+import { CloseModalButton } from "../ModalHandler";
 import {
     StyledForm,
     StyledFormContainer,
@@ -10,6 +11,7 @@ export const SearchModal = () => {
     return (
         <>
             <StyledFormContainer>
+                <CloseModalButton />
                 <StyledFormTitle>Search Location 🌐</StyledFormTitle>
 
                 <StyledForm action={search}>
