@@ -1,14 +1,15 @@
 import './index.css';
-import { search } from '../../API/search';
+
+const openModal = () => {
+    console.log('Opens modal');
+}
 
 export const SearchLocation = () => {
     return (
         <>
-            <form action={search} className="search-location-form">
-                Search for current weather ⛅
-                <input className='form-input' name="query" />
-                <button type='submit'>Search</button>
-            </form>
+            <div className="button-container">
+                <button type='submit' onClick={openModal}>🔎︎ Search</button>
+            </div>
         </>
     )
 }

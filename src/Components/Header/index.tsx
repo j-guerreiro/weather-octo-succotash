@@ -1,16 +1,21 @@
-import './index.css';
+import {
+    StyledHeader,
+    StyledAppTitle,
+    StyledNav,
+} from './style';
 
 export const Header = () => {
     return (
         <>
-            <header className="app-header">
-                <nav className="app-nav">
-                    <ul className="nav-links">
+            <StyledHeader>
+                <StyledAppTitle>weather forecast app</StyledAppTitle>
+                <StyledNav>
+                    <ul>
                         <li><a href="">home</a></li>
                         <li><a href="">about</a></li>
                     </ul>
-                </nav>
-            </header>
+                </StyledNav>
+            </StyledHeader>
         </>
     )
 }
