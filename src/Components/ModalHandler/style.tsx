@@ -8,3 +8,7 @@ export const StyledButtonContainer = styled.div`
   padding: 20px;
   margin: 20px;
 `;
+
+export const StyledModalCloseButton = styled.button`
+  align-self: end;
+`

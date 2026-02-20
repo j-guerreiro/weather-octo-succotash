@@ -1,6 +1,20 @@
 import { useState } from 'react';
-import { StyledButtonContainer } from './style';
+import { StyledButtonContainer, StyledModalCloseButton } from './style';
 import { SearchModal } from '../SearchModal';
+
+
+
+export const CloseModalButton = () => {
+    const closeModalHandler = () => {
+        console.log("Close modal");
+    }
+
+    return (
+        <StyledModalCloseButton
+            onClick={closeModalHandler}>X
+        </StyledModalCloseButton>
+    )
+}
 
 /**
  * Button component that opens the search location modal.
@@ -30,7 +44,7 @@ export const ModalOpenerButton = () => {
                     Search
                 </button>
             </StyledButtonContainer >
-            <SearchModal />
+            {/* <SearchModal /> */}
         </>
     )
 }
