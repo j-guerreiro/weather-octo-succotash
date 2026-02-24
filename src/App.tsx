@@ -9,7 +9,9 @@ function App() {
     <>
       <Header />
       <ModalOpenerButton />
-      <Footer />
+      <Footer>
+        <em>Copyright <a href="#">jguerreiro</a></em>
+      </Footer>
     </>
   )
 }
