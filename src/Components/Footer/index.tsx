@@ -1,11 +1,13 @@
 import { StyledFooter } from './style';
 
-export const Footer = () => {
+interface FooterProps {
+    children: React.ReactNode;
+}
+
+export const Footer = ({ children }: FooterProps) => {
     return (
-        <>
-            <StyledFooter className='footer'>
-                <em>Copyright <a href="#">jguerreiro</a></em>
-            </StyledFooter>
-        </>
+        <StyledFooter>
+            {children}
+        </StyledFooter>
     )
 }
