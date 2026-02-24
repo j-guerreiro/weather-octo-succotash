@@ -1,18 +1,22 @@
-import { useState } from 'react';
-import { StyledButtonContainer, StyledModalCloseButton } from './style';
+import { StyledButtonContainer } from './style';
 import { SearchModal } from '../SearchModal';
+import { useState } from 'react';
 
+interface OpenModalButtonProps {
+    clickHandler: () => void;
+    children: string;
+}
 
-
-export const CloseModalButton = () => {
-    const closeModalHandler = () => {
-        console.log("Close modal");
-    }
-
+const OpenModalButton = ({
+    clickHandler, children
+}: OpenModalButtonProps) => {
     return (
-        <StyledModalCloseButton
-            onClick={closeModalHandler}>X
-        </StyledModalCloseButton>
+        <StyledButtonContainer>
+            <button
+                onClick={clickHandler}>
+                {children}
+            </button>
+        </StyledButtonContainer >
     )
 }
 
@@ -20,31 +24,21 @@ export const CloseModalButton = () => {
  * Button component that opens the search location modal.
  */
 export const ModalOpenerButton = () => {
-    const [modalStatus, setModalStatus] = useState(true);
+    // Default modal state (closed).
+    const [isActive, setIsActive] = useState(false);
 
     const openModalHandler = () => {
-        if (!modalStatus) {
-            setModalStatus(true);
-            console.log(modalStatus);
-        }
-
-        if (modalStatus === true) {
-            // render modal - to improve
-            return (
-                <SearchModal />
-            )
-        }
+        setIsActive(true);
     }
 
     return (
         <>
-            <StyledButtonContainer>
-                <button
-                    onClick={openModalHandler}>
-                    Search
-                </button>
-            </StyledButtonContainer >
-            {/* <SearchModal /> */}
+            <OpenModalButton
+                clickHandler={openModalHandler}
+            >
+                Search
+            </OpenModalButton>
+            {isActive ? <SearchModal /> : ''}
         </>
     )
 }
