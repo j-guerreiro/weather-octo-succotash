@@ -35,6 +35,23 @@ export const StyledFormOuterContainer = styled.div`
   width: 100%;
   height: 100%;
   cursor: pointer;
+  backdrop-filter: blur(15px);
+  
+  {/* Funny Animation when opening the modal */}
+  animation-duration: .2s;
+  animation-name: slide-in-fast;
+  @keyframes slide-in-fast {
+    from {
+      translate: 0 0 150vw;
+      scale: 200% 1;
+    }
+
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+}
 `
 
 export const StyledFormInnerContainer = styled.div`
@@ -54,3 +71,4 @@ export const StyledFormInnerContainer = styled.div`
 export const StyledModalCloseButton = styled.button`
   align-self: end;
 `
+
