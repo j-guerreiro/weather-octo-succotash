@@ -1,19 +1,28 @@
 import styled from '@emotion/styled';
 
 export const StyledForm = styled.form`
+  align-items: center;
   display: flex;
   flex-direction: row;
   padding: 20px;
-  margin: 20px;;
+  margin: 20px;
 `;
 
 export const StyledFormTitle = styled.h1`
   font-size: 16px;
+  border: 1px solid #031820;
+  padding: 1rem;
+  border-radius: 8px;
 `
 
 export const StyledFormInput = styled.input`
   margin: 10px;
   padding: 5px;
+  height: 1.5rem;
+  
+  @media (min-width: 616px) {
+    width: 400px;
+  }
 `;
 
 export const StyledFormOuterContainer = styled.div`
@@ -33,12 +42,11 @@ export const StyledFormInnerContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid #2196F3;
+  border: 1px solid #2196F3;
   border-radius: 5px;
-  box-shadow: 0 0 25px 0 #2196F3;
+  box-shadow: 0 0 4px 0px #2862ca;
   background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   padding: 10px;
   margin: 10px;
 `;
