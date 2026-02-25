@@ -8,3 +8,7 @@ export const StyledButtonContainer = styled.div`
   padding: 20px;
   margin: 20px;
 `;
+
+export const StyledButton = styled.button`
+  background-color: #353871;
+`

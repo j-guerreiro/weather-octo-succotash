@@ -9,6 +9,11 @@ export const StyledHeader = styled.header`
 
 export const StyledAppTitle = styled.h1`
   font-size: 24px;
+  border: 1px solid #222222;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: #242a354f;
+  text-transform: capitalize;
 `;
 
 export const StyledNav = styled.nav`

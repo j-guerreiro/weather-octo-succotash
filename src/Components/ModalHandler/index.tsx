@@ -1,4 +1,4 @@
-import { StyledButtonContainer } from './style';
+import { StyledButton, StyledButtonContainer } from './style';
 import { SearchModal } from '../SearchModal';
 import { useState } from 'react';
 
@@ -12,10 +12,10 @@ const OpenModalButton = ({
 }: OpenModalButtonProps) => {
     return (
         <StyledButtonContainer>
-            <button
+            <StyledButton
                 onClick={clickHandler}>
                 {children}
-            </button>
+            </StyledButton>
         </StyledButtonContainer >
     )
 }
