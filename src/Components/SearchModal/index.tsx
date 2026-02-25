@@ -8,13 +8,20 @@ import {
     StyledFormOuterContainer
 } from "./style";
 
+interface modalProps {
+    modalState: boolean;
+    setModalState: (modalState: boolean) => void;
+}
+
 /**
  * Handler for closing/hiding the modal.
  */
-const CloseModalButton = () => {
+const CloseModalButton = ({ modalState, setModalState }: modalProps) => {
 
     const closeModalHandler = () => {
-        console.log("close")
+        if (modalState) {
+            setModalState(false);
+        }
     }
 
     return (
@@ -24,17 +31,29 @@ const CloseModalButton = () => {
     )
 }
 
-export const SearchModal = () => {
+const ModalForm = ({ modalState, setModalState }: modalProps) => {
+
+    if (modalState) {
+        return (
+            <StyledFormOuterContainer>
+                <StyledFormInnerContainer>
+                    <CloseModalButton modalState={modalState} setModalState={setModalState} />
+                    <StyledFormTitle>Search Location 🌐</StyledFormTitle>
+                    <StyledForm action={search}>
+                        <StyledFormInput className='form-input' name="query" />
+                        <button type='submit'>🔎︎</button>
+                    </StyledForm>
+                </StyledFormInnerContainer>
+            </StyledFormOuterContainer>
+        )
+    }
+}
+
+export const SearchModal = ({ modalState, setModalState }: modalProps) => {
     return (
-        <StyledFormOuterContainer>
-            <StyledFormInnerContainer>
-                <CloseModalButton />
-                <StyledFormTitle>Search Location 🌐</StyledFormTitle>
-                <StyledForm action={search}>
-                    <StyledFormInput className='form-input' name="query" />
-                    <button type='submit'>🔎︎</button>
-                </StyledForm>
-            </StyledFormInnerContainer>
-        </StyledFormOuterContainer>
+        <ModalForm
+            modalState={modalState}
+            setModalState={setModalState}
+        />
     )
 }

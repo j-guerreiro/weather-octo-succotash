@@ -21,6 +21,11 @@ const OpenModalButton = ({
 }
 
 /**
+ * To create the modal open/close, the link below helped:
+ * https://www.reddit.com/r/reactjs/comments/14k1o0x/the_most_challenging_thing_for_me_about_react_is/
+ */
+
+/**
  * Button component that opens the search location modal.
  */
 export const ModalOpenerButton = () => {
@@ -38,7 +43,7 @@ export const ModalOpenerButton = () => {
             >
                 Search
             </OpenModalButton>
-            {isActive ? <SearchModal /> : ''}
+            <SearchModal modalState={isActive} setModalState={setIsActive} />
         </>
     )
 }
