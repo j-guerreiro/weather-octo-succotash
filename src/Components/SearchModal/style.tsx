@@ -4,8 +4,8 @@ export const StyledForm = styled.form`
   align-items: center;
   display: flex;
   flex-direction: row;
-  padding: 20px;
-  margin: 20px;
+  padding: 5px;
+  margin: 5px;
 `;
 
 export const StyledFormTitle = styled.h1`
@@ -71,4 +71,55 @@ export const StyledFormInnerContainer = styled.div`
 export const StyledModalCloseButton = styled.button`
   align-self: end;
 `
+
+// dropdown of matching places under the input field
+export const SuggestionsContainer = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0;
+  max-height: 150px;
+  width: 100%;
+  max-width: 400px; /* roughly the same as the input's wide breakpoint */
+  overflow-y: auto;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+`;
+
+export const SuggestionItem = styled.li<{ highlighted: boolean }>`
+  padding: 8px;
+  cursor: pointer;
+  background: ${props => (props.highlighted ? '#ddd' : 'transparent')};
+  &:hover {
+    background: #eee;
+  }
+`;
+
+export const WeatherResult = styled.div`
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.3rem;
+  color: #fff;
+  border: 1px solid #2d2d2d;;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 0px #2862ca;
+`;
+
+export const Loader = styled.div`
+  margin-top: 10px;
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`;
 
